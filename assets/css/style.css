@@ -1,0 +1,41 @@
+div{
+    margin: 20px 20px 20px 20px;
+    height: auto;
+    width: auto;
+    align-self: center;
+    display: grid;
+    justify-content: center;
+}
+
+div#highscore{
+    width: 200px;
+    height: 100px;
+    background-color: green;
+    display: 1fr 1fr;
+    
+
+}
+
+div#timerbox{
+    border-color: blue;
+    background-color: chartreuse;
+    width: 100px;
+    height: 100px;
+    display: 1fr 3fr;
+    
+}
+div.titleBar{
+    height: 200px;
+    width: auto;
+    background-color: green;
+    display: flex;
+    justify-content: space-between;
+    font-size: 50px;
+    
+}
+div.mainQuiz{
+    height: 800px;
+    width: 1200px;
+    background-color: blue;
+    border-color: chartreuse;
+}
