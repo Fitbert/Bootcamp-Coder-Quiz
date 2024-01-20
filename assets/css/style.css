@@ -39,3 +39,21 @@ div.mainQuiz{
     background-color: blue;
     border-color: chartreuse;
 }
+a {
+    color: #d014ca;
+    text-decoration: none;
+  
+    transition: color 0.2s ease-in-out;
+  }
+  
+  a:hover, 
+  a:focus, 
+  a:active {
+    color: #1da01f;
+  }
+
+
+  /*****non visable*****/
+.hidden {
+    display: none;
+  }
