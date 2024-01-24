@@ -47,7 +47,7 @@ const QUESTION_LIST = [QUESTION_1, QUESTION_2, QUESTION_3, QUESTION_4, QUESTION_
 
 let currentQuestion = 0;
 
-let totalTime = 60;
+let totalTime = 100;
 let totalTimeInterval;
 let choiceStatusTimeout; 
 
@@ -62,7 +62,6 @@ function startGame() {
   
   displayTime();  
   displayQuestion();
-
   startTimer();
 }
 
@@ -134,11 +133,11 @@ function resetChoiceStatusEffects() {
 }
 
 function styleTimeRemainingDefault() {
-  TIME_REMAINING.style.color = "#4616E8";
+  TIME_REMAINING.style.color = "#5486f5";
 }
 
 function styleTimeRemainingWrong() {
-  TIME_REMAINING.style.color = "#E81648";
+  TIME_REMAINING.style.color = "#B85448";
 }
 
 function checkChoice(userChoice) {

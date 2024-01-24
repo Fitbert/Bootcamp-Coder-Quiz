@@ -10,7 +10,7 @@
 
 The Bootcamp Coder Quiz is a basic choice game for play that includes a timer and high score feature. When you add your initals to the High Score table will reamin to allow you to beat your score. 
 
-![screenshot](assets/images/portfoilo-screenshot.png)
+![gif](./assets/Bootcamp%20Quiz.gif)
 https://fitbert.github.io/coder-portfoilio-page/
 
 ## Credits
