@@ -214,7 +214,9 @@ function processInput(event) {
     const score = totalTime;
     const highscoreEntry = getNewHighscoreEntry(initials, score);
     saveHighscoreEntry(highscoreEntry);
+    console.log("Before redirection");
     window.location.href="/path/to//highscore.html";
+    console.log("After redirection");
   }
 }
 
