@@ -220,6 +220,7 @@ function processInput(event) {
   }
 }
 
+
 function getNewHighscoreEntry(initials, score) {
   const entry = {
     initials: initials,
