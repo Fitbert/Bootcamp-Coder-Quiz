@@ -1,11 +1,11 @@
-//Section list
+
 const QUIZ_SECTIONS = document.querySelectorAll(".quiz-section");
 
-//Start
+
 const START_SECTION = document.getElementById("start");
 const START_BTN = document.getElementById("start-button");
 
-//Quiz questions
+
 const QUIZ_SECTION = document.getElementById("quiz-questions");
 const TIME_REMAINING = document.getElementById("time-remaining");
 const QUESTION = document.getElementById("question");
@@ -14,7 +14,7 @@ const CHOICE_STATUSES = document.querySelectorAll(".choice-status");
 const CORRECT = document.getElementById("correct");
 const WRONG = document.getElementById("wrong");
 
-//End
+
 const END_SECTION = document.getElementById("end");
 const END_TITLE = document.getElementById("end-title");
 const SCORE = document.getElementById("score");
@@ -23,48 +23,7 @@ const SUBMIT_SCORE = document.getElementById("submit-score");
 const ERROR_MESSAGE = document.getElementById("error-message");
 
 //Questions ...//
-// addQuestion = ()=>{
-//     const url = 'https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=multiple'
-//     fetch(url)
-//     .then(data=>data.json())
-//     .then(result=> showQuestion(result.results));
-// }
-// showquestion = questions =>{
-//     const questionHTML = document.createElement('div');
-//     questionHTML.classList.add('col-12');
 
-//     questions.forEach(question =>{
-//         rightAns = question.correct_answer;
-
-//         let possibleAnswers = question.incorrect_answers;
-//         possibleAnswers.splice(Math.floor(Math.random()*3),0,rightAns);
-
-//         questionHTML.innerHTML= '<div class="row justify-content-between heading">
-//         <p class="category">Category:${question.category}</p>
-//         <div class="scores">
-//         <span class="badge badge-primary">{rightNumber}</span>
-//         <span class="badge badge-primary">{falseNumber}</span>
-//         </div>
-//         <div>
-//         <h2 class="text-center">${question.question};
-
-      
-
-//     const answerDiv = document.createElement('div');
-//     answerDiv.classList.add('questions','row','justify-contecnt-around','mt-5');
-
-//     possibleAnswers.forEach(answer=>{
-//         const answerHTML = document.createElement('li');
-//         answerHTML.classList.add('col-12','col-md-5');
-//         answerHTML.textContent = answer;
-        
-//         selectAnswer
-//         answerDiv.appendChild(answerHTML);
-//     })
-
-//     questionHTML.appendChild.apply(answerDiv);
-//     document.querySelector('#app').appendChild
-// })
 
 
 class Question {
@@ -92,12 +51,12 @@ let totalTime = 60;
 let totalTimeInterval;
 let choiceStatusTimeout; 
 
-/******** EVENT LISTENERS ********/ 
+
 START_BTN.addEventListener('click', startGame);
 CHOICES.addEventListener('click', processChoice);
 SUBMIT_SCORE.addEventListener('submit', processInput);
 
-/******** START GAME ********/ 
+
 function startGame() {
   showElement(QUIZ_SECTIONS, QUIZ_SECTION);
   
@@ -107,7 +66,7 @@ function startGame() {
   startTimer();
 }
 
-/******** SHOWING/HIDING ELEMENTS ********/ 
+
 function showElement(siblingList, showElement) {
   for (element of siblingList) {
     hideElement(element);
@@ -121,7 +80,7 @@ function hideElement(element) {
   }
 }
 
-/******** TIME ********/ 
+
 function displayTime() {
   TIME_REMAINING.textContent = totalTime;
 }
@@ -142,7 +101,6 @@ function checkTime() {
   }
 }
 
-/******** QUESTIONS ********/ 
 function displayQuestion() {
   QUESTION.textContent = QUESTION_LIST[currentQuestion].question;
 
@@ -162,7 +120,6 @@ function displayChoiceList() {
   });
 }
 
-//when user answers a question
 function processChoice(event) {
   const userChoice = parseInt(event.target.parentElement.dataset.index);
 
@@ -171,7 +128,6 @@ function processChoice(event) {
   getNextQuestion();
 }
 
-//Displaying choice statuses
 function resetChoiceStatusEffects() {
   clearTimeout(choiceStatusTimeout);
   styleTimeRemainingDefault();
@@ -223,7 +179,6 @@ function displayCorrectChoiceEffects() {
   }, 1000);
 }
 
-//Get next question
 function getNextQuestion() {
   currentQuestion++;
   if (currentQuestion >= QUESTION_LIST.length) {
@@ -233,7 +188,6 @@ function getNextQuestion() {
   }
 }
 
-/******** ENDING THE GAME ********/ 
 function endGame() {
   clearInterval(totalTimeInterval);
   
@@ -254,7 +208,6 @@ function setEndHeading() {
   }
 }
 
-/******** SUBMITTING INITIALS ********/ 
 function processInput(event) {
   event.preventDefault();
 
