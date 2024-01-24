@@ -22,8 +22,6 @@ const INITIALS_INPUT = document.getElementById("initials");
 const SUBMIT_SCORE = document.getElementById("submit-score");
 const ERROR_MESSAGE = document.getElementById("error-message");
 
-//Questions ...//
-
 
 
 class Question {
@@ -216,7 +214,7 @@ function processInput(event) {
     const score = totalTime;
     const highscoreEntry = getNewHighscoreEntry(initials, score);
     saveHighscoreEntry(highscoreEntry);
-    window.location.href="./highscore.html";
+    window.location.href="/path/to//highscore.html";
   }
 }
 
