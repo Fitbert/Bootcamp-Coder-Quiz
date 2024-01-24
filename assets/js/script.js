@@ -218,6 +218,7 @@ function processInput(event) {
     window.location.href="./highscore.html";
     console.log("After redirection");
   }
+  
 }
 
 
