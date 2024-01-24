@@ -215,7 +215,7 @@ function processInput(event) {
     const highscoreEntry = getNewHighscoreEntry(initials, score);
     saveHighscoreEntry(highscoreEntry);
     console.log("Before redirection");
-    window.location.href="/path/to/highscore.html";
+    window.location.href="./highscore.html";
     console.log("After redirection");
   }
 }
