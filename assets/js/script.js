@@ -31,8 +31,8 @@ class Question {
     this.indexOfCorrectChoice = indexOfCorrectChoice;
   }
 }
-const QUESTION_1 = new Question("Commonly used data types DO NOT include: ", 
-  ["Strings", "Booleans", "Alerts", "Numbers"], 2);
+const QUESTION_1 = new Question("If you were to code software in this language you'd only be able to type 0's and 1's. ", 
+  ["Binary", "JavaScript","C++","Python"], 1);
 const QUESTION_2 = new Question("The condition in an if / else statement is enclosed within ____.", 
   ["Quotes", "Curly brackets", "Parentheses", "Square brackets"], 2);
 const QUESTION_3 = new Question("Arrays in JavaScript can be used to store ____.", 
@@ -218,7 +218,7 @@ function processInput(event) {
     window.location.href="./highscore.html";
     console.log("After redirection");
   }
-  
+
 }
 
 
